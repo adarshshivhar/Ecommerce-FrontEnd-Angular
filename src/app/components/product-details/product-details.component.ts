@@ -10,10 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  product: Product;
+  product: Product = new Product();
 
   constructor(private productService: ProductService,
-              private route: ActivatedRoute) { }
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(() => {
